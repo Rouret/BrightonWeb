@@ -1,0 +1,65 @@
+*{
+    list-style: none;
+    text-decoration: none;
+}
+
+
+header{
+    width: 100vw;
+    height: 8vh;
+    background: #861200;
+    color:white !important;
+}
+footer{
+    width: 100vw;
+    height: 8vh;
+    position: fixed;
+    bottom: 0px;
+    background:#861200;
+    color:white !important;
+}
+a{
+    color:white !important;
+    margin-right: 1.5em;
+}
+#nav li{
+    color:white !important;
+    margin-right: 1.5em;
+    transition: 0.25s;
+    color: black;
+    font-size: x-large;
+}
+
+#nav li:hover{
+    transition: 0.25s;
+    margin-right: 1.5em;
+    color: green;
+    font-size: x-large;
+}
+
+#help li a{
+    font-size: medium;
+}
+
+#avatarHeader{
+    border: black 3px solid;
+    width:35px;
+    height:35px;
+    background: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSVgcJh843HRH8eJ1JOWGrVVdJnRWau9-8Up4U1dvt5hGOJGY6B&s") no-repeat;
+    background-size: contain;
+}
+
+.UniqueRegular{
+    font-family: 'UniqueRegular';
+    font-weight: normal;
+    font-style: normal;
+}
+
+.FuturaRennerRegular {
+    font-family: 'FuturaRennerRegular';
+    font-weight: normal;
+    font-style: normal;
+ } 
+
+
+

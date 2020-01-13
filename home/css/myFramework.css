@@ -1,0 +1,348 @@
+/* CLASS
+MEDIA
+DEBUG */
+/* =======================================================CLASS */
+.col{
+    display: flex;
+    flex-direction: column;
+}
+.colr{
+    display: flex;
+    flex-direction: column-reverse;
+}
+.row{
+    display: flex;
+    flex-direction: row;
+}
+.rowr{
+    display: flex;
+    flex-direction: row-reverse;
+}
+.spaceBetween{
+    display: flex;
+    justify-content: space-between;
+}
+.spaceAround{
+    display: flex;
+    justify-content: space-around;
+}
+
+.border{
+    border: black 1px solid;
+}
+.border-t{
+    border-top: black 1px solid;
+}
+.border-r{
+    border-right: black 1px solid;
+}
+.border-b{
+    border-bottom: black 1px solid;
+}
+.border-l{
+    border-left: black 1px solid;
+}
+
+.d-flex{
+    display: flex;
+}
+.flex-1{
+    flex: 1;
+}
+.flex-2{
+    flex: 2;
+}
+.flex-3{
+    flex: 3;
+}
+.flex-4{
+    flex: 4;
+}
+.flex-5{
+    flex: 5;
+}
+.flex-6{
+    flex: 6;
+}
+.flex-7{
+    flex: 7;
+}
+.flex-8{
+    flex: 8;
+}
+
+.z-index-0{
+    z-index: 0;
+}
+.z-index-1{
+    z-index: 1;
+}
+.z-index-2{
+    z-index: 2;
+}
+.z-index-3{
+    z-index: 3;
+}
+
+
+.center-v{
+    display: flex;
+    align-items: center;
+}
+.center-h{
+    display: flex;
+    justify-content: center;
+}
+.center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.h-90{
+    height: 90%;
+}
+.h-80{
+    height: 80%;
+}
+.h-70{
+    height: 70%;
+}
+.h-66{
+    height: calc(2*(100%/3));
+}
+.h-60{
+    height: 60%;
+}
+.h-50{
+    height: 50%;
+}
+.h-40{
+    height: 40%;
+}
+.h-33{
+    height: calc(100%/3);
+}
+.h-30{
+    height: 30%;
+}
+.h-25{
+    height: 25%;
+}
+.h-20{
+    height: 20%;
+}
+.h-10{
+    height: 10%;
+}
+.w-90{
+    width: 90%;
+}
+.w-80{
+    width: 80%;
+}
+.w-70{
+    width: 70%;
+}
+.w-66{
+    width: calc(2*(100%/3));
+}
+.w-60{
+    width: 60%;
+}
+.w-50{
+    width: 50%;
+}
+.w-40{
+    width: 40%;
+}
+.w-33{
+    width: calc(100%/3);
+}
+.w-30{
+    width: 30%;
+}
+.w-25{
+    width: 25%;
+}
+.w-20{
+    width: 20%;
+}
+.w-10{
+    width: 10%;
+}
+
+.all-w{
+    width: 100%;
+}
+.all-h{
+    height: 100%;
+}
+.all{
+    width: 100%;
+    height: 100%;
+}
+
+.pt-05{
+    padding-top: 0.5em;
+}
+.pb-05{
+    padding-bottom: 0.5em;
+}
+.pl-05{
+    padding-left: 0.5em;
+}
+.pr-05{
+    padding-right: 0.5em;
+}
+
+.pt-1{
+    padding-top: 1em;
+}
+.pb-1{
+    padding-bottom: 1em;
+}
+.pl-1{
+    padding-left: 1em;
+}
+.pr-1{
+    padding-right: 1em;
+}
+
+.pt-2{
+    padding-top: 2em;
+}
+.pb-2{
+    padding-bottom: 2em;
+}
+.pl-2{
+    padding-left: 2em;
+}
+.pr-2{
+    padding-right: 2em;
+}
+
+.mt-05{
+    margin-top: 0.5em;
+}
+.mb-05{
+    margin-bottom: 0.5em;
+}
+.ml-05{
+    margin-left: 0.5em;
+}
+.mr-05{
+    margin-right: 0.5em;
+}
+
+.mt-1{
+    margin-top: 1em;
+}
+.mb-1{
+    margin-bottom: 1em;
+}
+.ml-1{
+    margin-left: 1em;
+}
+.mr-1{
+    margin-right: 1em;
+}
+
+.mt-2{
+    margin-top: 2em;
+}
+.mb-2{
+    margin-bottom: 2em;
+}
+.ml-2{
+    margin-left: 2em;
+}
+.mr-2{
+    margin-right: 2em;
+}
+
+.pointer{
+    cursor: pointer;
+}
+/* =======================================================MEDIA */
+/* Small devices (landscape phones, 576px and up) */
+@media screen and (max-width: 768px){
+    .row-s{
+        flex-direction: row !important;
+    }
+    .rowr-s{
+        flex-direction: row-reverse !important;
+    }
+    .col-s{
+        flex-direction: column !important;
+    }
+    .colr-s{
+        flex-direction: column-reverse !important;
+    }
+    
+}
+/* Medium devices (tablets, 768px and up) */
+@media screen and (min-width: 769px) and (max-width: 992px){
+    .row-m{
+        flex-direction: row !important;
+    }
+    .rowr-m{
+        flex-direction: row-reverse !important;
+    }
+    .col-m{
+        flex-direction: column !important;
+    }
+    .colr-m{
+        flex-direction: column-reverse !important;
+    }
+}
+/* Large devices (desktops, 992px and up) */
+@media (max-width: 992px) {
+    .row-l{
+        flex-direction: row !important;
+    }
+    .rowr-l{
+        flex-direction: row-reverse !important;
+    }
+    .col-l{
+        flex-direction: column !important;
+    }
+    .colr-l{
+        flex-direction: column-reverse !important;
+    }
+}
+/* Extra large devices (large desktops, 1200px and up) */
+@media (max-width: 1200px) {
+    .row-e{
+        flex-direction: row !important;
+    }
+    .rowr-e{
+        flex-direction: row-reverse !important;
+    }
+    .col-e{
+        flex-direction: column !important;
+    }
+    .colr-e{
+        flex-direction: column-reverse !important;
+    }
+}
+/* =======================================================DEBUG */
+/* FOR THE DEBUG */
+.red{
+    background: red;
+}
+.green{
+    background: green;
+}
+.blue{
+    background: blue;
+}
+.orange{
+    background: orange;
+}
+.black{
+    background: black;
+}
+.white{
+    background: white;
+}

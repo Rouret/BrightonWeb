@@ -1,0 +1,51 @@
+.col            flex-direction: column;
+.colr           flex-direction: column-reverse;
+.row            flex-direction: row;
+.rowr           flex-direction: row-reverse;
+.spaceBetween   justify-content: space-between;
+.spaceAround    justify-content: space-around;
+
+.border
+.border-t
+.border-r
+.border-b
+.border-l
+
+.d-flex         display:flex
+.flex-1         flex:1
+    ...
+.flex-8         flex:8
+
+.z-index-0      z-index:1
+...
+.z-index-3      z-index:3
+
+.center-v       align-items: center;
+.center-h       justify-content: center;
+.center         .center-v + .center-h
+
+h-XX            height: 10-20-...-90%
+w-XX            width: 10-20-...-90%    
+
+.all-w          width: 100%;
+.all-h          height: 100%;
+.all            .all-w + .all-h 
+
+.pX-Y           padding
+.mX-Y           margin
+    X -> b,t,l,r = bottom,top,left,right
+    Y -> 05,1,2 em
+
+border          for dev (border:1px black solid)
+pointer
+media
+    Small devices   ->  s
+    Medium devices  ->  m
+    Large devices   ->  l
+    Extra large     ->  e
+
+    .row-x   flex-direction: row;
+    .col-x   flex-direction: column;
+    .colr-x  flex-direction: column-reverse;
+    .rowr-x     flex-direction: row-reverse;
+
