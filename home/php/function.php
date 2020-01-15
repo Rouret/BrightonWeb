@@ -5,7 +5,7 @@
         if($log==0){
             $nav = array("home", "depot");
         }else{
-            $nav = array("home", "calendar","map","depot");
+            $nav = array("home", "calendar","map","depot","users");
         }
         return $nav;
     }

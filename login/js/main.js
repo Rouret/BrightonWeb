@@ -5,13 +5,14 @@ $(document).ready(function() {
   }
 
     $("#submit").click(function(event) {
-        if ($("#username").val() == "" && $("#username").val() === undefined && $("#password").val() == "" && $("#password").val() === undefined) {
-          event.preventDefault();
-          customModal("Veuillez rentrer tous les champs");
-        }else{
+        // if ($("#login").val() == "" || $("#mdp").val() == "") {
+        //   event.preventDefault();
+        //   customModal("Veuillez rentrer tous les champs");
+        // }else{
           //location.href = location.href.split('?')[0];
-          $("#password").val(sha1($("#password").val()));
-        }
+          $("#mdp").val(sha1($("#mdp").val()));
+          $("#form").submit();
+        // }
     })
 })
 

@@ -1,9 +1,6 @@
 
 <?php
-    session_start();
-    if(isset($_SESSION["log"])){ 
-        header("Location: ../home/home.php");
-    }
+    
 ?>
 
 <!DOCTYPE html>
@@ -19,12 +16,12 @@
 <body>
     <div class="wrapper">
         <div class="login">
-            <form method="post" action="" id="form">
+            <form method="post" action="./www/Acces.php" id="form">
                 <p class="title">Connexion BrigthonAPP</p>
-                <input type="text" name="username" placeholder="Email" id="username" autofocus/>
+                <input type="text" name="login" placeholder="Email" id="login" autofocus/>
                 <i class="fa fa-user"></i>
 
-                <input type="password" name="password" placeholder="Mot de passe" id="password" />
+                <input type="password" name="mdp" placeholder="Mot de passe" id="mdp" />
                 <i class="fa fa-key"></i>
 
                 <!-- <a href="#">Forgot your password?</a> -->

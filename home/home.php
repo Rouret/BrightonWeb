@@ -24,13 +24,18 @@
 
     <link rel='stylesheet' type='text/css' media='screen' href='https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css'>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="css/dhtmlxscheduler.css">
-
+    <link rel='stylesheet' type='text/css' media='screen' href='./vendor/fullcalendar/core/main.min.css'>
+    <link rel='stylesheet' type='text/css' media='screen' href='./vendor/fullcalendar/daygrid/main.min.css'>
+    <link rel='stylesheet' type='text/css' media='screen' href='./vendor/fullcalendar/timegrid/main.min.css'>
     <link rel='stylesheet' type='text/css' media='screen' href='css/myFramework.css'>
     <link rel='stylesheet' type='text/css' media='screen' href='css/main.css'> 
 
     <script src='./js/jquery.js'></script>
-    <script src="./js/dhtmlxscheduler.js"></script>
+    <!-- CALENDAR TEST -->
+    <!-- <script src="./js/dhtmlxscheduler.js"></script> -->
+    
+    <script src='./vendor/fullcalendar/core/main.js'></script>
+    <script src='./vendor/fullcalendar/daygrid/main.js'></script>
 </head>
 <body>
     <?php
