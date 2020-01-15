@@ -1,22 +1,17 @@
 <header>
     <div class="spaceAround row all border-b">
         <div class="flex-2 center border-r event" data-target="home">
-            <h1 class="UniqueRegular">Brighton Web</h1>
+            <h1 class="UniqueRegular pointer">Brighton Web</h1>
         </div>
         <div class="flex-6 center-v">
             <div>
                 <nav>
                     <ul class="row" id="nav">
                         <?php
-                            if(isset($_SESSION["log"])){
-                                $log=$_SESSION["log"];                               
-                                if($log==0){
-                                    $nav = array("home", "depot");
-                                }else{
-                                    $nav = array("home", "calendar","map","depot");
-                                }
+                            $nav=getNav();
+                            if(count($nav)!=0){
                                 for($i=0;$i<count($nav);$i++){
-                                    echo '<li class="event" data-target="'.$nav[$i].'">'.ucfirst($nav[$i]).'</li>';
+                                    echo '<li class="event pointer" data-target="'.$nav[$i].'">'.ucfirst($nav[$i]).'</li>';
                                 }
                             }
                         ?>

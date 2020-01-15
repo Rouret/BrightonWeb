@@ -1,5 +1,8 @@
 <?php
     session_start(); 
+    include_once("./php/function.php");
+    verifLog("../login/login.php");
+
 ?>
 <!DOCTYPE html>
 <html>
@@ -10,6 +13,8 @@
         <?php
             if(isset($_GET["screen"])){
                 echo ucfirst($_GET["screen"])." page";
+            }else{
+                echo "BrightonWeb";
             }
         ?>
     </title>
@@ -19,8 +24,13 @@
 
     <link rel='stylesheet' type='text/css' media='screen' href='https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css'>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/dhtmlxscheduler.css">
+
     <link rel='stylesheet' type='text/css' media='screen' href='css/myFramework.css'>
     <link rel='stylesheet' type='text/css' media='screen' href='css/main.css'> 
+
+    <script src='./js/jquery.js'></script>
+    <script src="./js/dhtmlxscheduler.js"></script>
 </head>
 <body>
     <?php
@@ -30,13 +40,14 @@
         <?php
             if(isset($_GET["screen"])){
                 $screen=$_GET["screen"];
-                $link="./screens/";
-                $array = array("home", "settings");
-                if(array_search($screen,$array)!==FALSE){
-                    include_once($link.$screen.".php"); 
-                }else{
-                    header("Location: ".$link."errors/error.php?error=404");
-                }    
+                $array = getNav();
+                if(count($nav)!=0){
+                    if(array_search($screen,$array)!==FALSE){
+                        include_once("./screens/".$screen.".php"); 
+                    }else{
+                        header("Location: ../errors/error.php?error=404");
+                    }
+                }
             }else{
                 header("Location: ./home.php?screen=home");
             }
@@ -45,7 +56,7 @@
     <?php
         include_once("./screens/footer.php");
     ?>
-    <script src='./js/jquery.js'></script>
+
     <script src='./js/custom.js'></script>
 </body>
 </html>

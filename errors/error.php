@@ -11,12 +11,9 @@
 	<!-- Custom stlylesheet -->
 	<link type="text/css" rel="stylesheet" href="css/style.css" />
 	<!--[if lt IE 9]>
-
-		  <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
-
-		  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-
-		<![endif]-->
+		<script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+		<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+	<![endif]-->
 </head>
 <body>
 	<div id="clouds">
@@ -51,7 +48,7 @@
 				echo "<div class='error'>X<span></span>X</div>";
 			}
 		?>
-		<a class='btn' href='../../home.php?screen=home'>Back to home</a>
+		<a class='btn' href='../home/home.php?screen=home'>Back to home</a>
 	</div>
 </body>
 </html>

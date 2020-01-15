@@ -3,7 +3,10 @@
     text-decoration: none;
 }
 
-
+section{
+    width: 100vw;
+    height: 84vh;
+}
 header{
     width: 100vw;
     height: 8vh;
