@@ -21,4 +21,18 @@
             header("Location: ".$error_url);
         }
     }
+    function whoIsLog(){
+        $str="Error";
+        if(isLog()){
+            switch($_SESSION["log"]){
+                case "0":
+                    $str="Etudiant";
+                    break;
+                case "1":
+                    $str="Administrateur";
+                    break;
+            }
+        }
+        return $str;
+    }
 ?>

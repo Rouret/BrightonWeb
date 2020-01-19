@@ -8,9 +8,9 @@
     private $ldapconn;        // ressource caractéristique du LDAP
     private $dn = "";         // dn de la personne identifiée
     private $password = "";   // password de cette même personne
-    private $nbre_resultat;   // nombre de résultat de la dernière recherche effectuée
+    private $result;   // nombre de résultat de la dernière recherche effectuée
     private $info = array();  // structure (tableau) de mémorisation de la recherche
-
+    private $userdn;
 
 
   /***********************
@@ -85,25 +85,18 @@
   Retourne le nombre de résultats de cette recherche
   Mémorise le nombre de résultats et le résultat de la recherche dans les données membres.
   ***********************/
-    public function recherche($dossierDeBase,$filtre) {
-		// méthode déterminant le résulat et le mémorise dans la donnée membre $this->info le résultat de la recherche
-		// elle retourne le nombre de résultat
-
-		$this->nbre_resultat=0;
-		$this->resu_recherche = ldap_search($this->ldapconn,$dossierDeBase, $filtre);
-		// dossier de base : celui à partir duquel la recherche doit s'effectuer. Exemple : (dn=univ-savoie, dn=iut)
-		// on précisera le filtre de la recherche. (Note : il y a filtrage sur les informations accessibles - donc suivant l'acl).
-		//
-
-		if ($this->resu_recherche) { // si on  a un resultat
-			$this->nbre_resultat = ldap_count_entries($this->ldapconn,$this->resu_recherche);
+    public function recherche($userdn,$filtre) {
+    $this->userdn = $userdn;
+    $resu = ldap_search($this->ldapconn,$this->userdn,$filtre);
+    if ($resu) { // si on  a un resultat
+			$nbre_resultat = ldap_count_entries($this->ldapconn,$resu);
 			if ($this->debug) {
-				echo "Il y a ".$this->nbre_resultat." resultat(s)";
+				echo "Il y a ".$nbre_resultat." resultat(s)";
 			}
 			// mémorisation du résultat de la recherche dans la donnée membre $this->info
-			$this->info = ldap_get_entries($this->ldapconn, $this->resu_recherche);
+			$this->info = ldap_get_entries($this->ldapconn, $resu);
 		}
-		return $this->nbre_resultat;
+		return $nbre_resultat;
 	}
 
   /***********************
@@ -148,8 +141,10 @@
   Methode nécessaire pour l'ajout d'une personne (en mode admin).
   Retourne le résultat de la tentive d'ajout.
   ***********************/
-    public function ajoutlist($user) {
-                return ldap_add($this->ldapconn, $this->dn, $user);
+    public function ajoutlist($userdn,$user) {
+      $this->userdn = $userdn;
+      $res =  ldap_add($this->ldapconn, $this->userdn, $user);
+      return $res;
     }
 
   /***********************

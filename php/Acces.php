@@ -7,8 +7,8 @@
 </head>
 <body>
     <?php
-		require_once("../../ClasseLDAP.php");
-		$ldap = new monLDAP("10.102.61.68");  // instanciation de la classe (avec l'adresse du serveur ldap)
+		require_once("./ClasseLDAP.php");
+		$ldap = new monLDAP("10.102.74.61");  // instanciation de la classe (avec l'adresse du serveur ldap)
 		
 		if (empty($_POST["login"]) || empty($_POST["mdp"])) 
 		{
@@ -23,7 +23,7 @@
         else {
 			include('acceuil.php');
 			echo "Bienvenue ". $ldap->getLigneAttribut(0,"cn") ." !\nvous etes bien connecter en tant que ".$_POST["login"];
-			echo "<br><form name='modif' action='modif.php' method='post'><input id='login' Name='login' type='hidden' value='".$_POST["login"]."'><input type='submit' value='modifier mot de passe'></form>";
+			echo "<br><form name='modif' action='../login/modif.php' method='post'><input id='login' Name='login' type='hidden' value='".$_POST["login"]."'><input type='submit' value='modifier mot de passe'></form>";
 			echo "<br><form name='recherche' action='recherche.php' method='post'><input id='login' Name='login'' value='".$_POST["login"]."'><input type='submit' value='rechercher l'utilisateur'></form>";
 			}
     ?>

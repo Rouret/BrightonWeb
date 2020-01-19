@@ -38,7 +38,7 @@
             alert("fichier non pris en charge, format des données doit être 'firstname;surname;flat'");
             return;
         }
-        for (var i=0; i<allTextLines.length; i++) {
+        for (var i=0; i<allTextLines.length-1; i++) {
             if(bool) {
                 var data = allTextLines[i].split(',');
             } else {

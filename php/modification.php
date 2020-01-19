@@ -8,7 +8,7 @@
 <body>
     <?php
         require_once("ClasseLDAP.php");
-        $ldap = new monLDAP("10.102.61.68");  // instanciation de la classe (avec l'adresse du serveur ldap)
+        $ldap = new monLDAP("10.102.74.61");  // instanciation de la classe (avec l'adresse du serveur ldap)
 
         //identification
         $dn="uid=".$_POST["login"].",ou=users,c=Annecy,dc=brighton,dc=app";
